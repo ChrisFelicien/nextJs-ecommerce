@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
-import HeroCarousel from "./HeroCarousel";
+import HeroCarousel from "../home/HeroCarousel";
 
 const Hero = () => {
   return (
