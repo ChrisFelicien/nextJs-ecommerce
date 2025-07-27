@@ -13,10 +13,15 @@ const NavSearch = () => {
   );
 
   useEffect(() => {
-    if (!searchParams.get("search")) {
-      setSearch("");
+    const currentSearch = searchParams.get("search") || "";
+    if (currentSearch !== search) {
+      setSearch(currentSearch);
     }
-  }, [searchParams.get("search"), searchParams]);
+
+    // if (!searchParams.get("search")) {
+    //   setSearch("");
+    // }
+  }, [searchParams, search]);
 
   const handleSearch = useDebouncedCallback((value: string) => {
     const params = new URLSearchParams(searchParams);
