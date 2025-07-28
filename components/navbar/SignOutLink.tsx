@@ -1,8 +1,19 @@
+"use client";
+// import Link from "next/link";
+// import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
+import { SignOutButton } from "@clerk/nextjs";
+
 const SignOutLink = () => {
+  const handleLogout = () => {
+    toast("Logout successful");
+  };
   return (
-    <div>
-      <h1 className='text-3xl'>Sing out</h1>
-    </div>
+    <SignOutButton redirectUrl='/'>
+      <button className='w-full text-left' onClick={handleLogout}>
+        Logout
+      </button>
+    </SignOutButton>
   );
 };
 

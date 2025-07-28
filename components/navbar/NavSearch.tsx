@@ -12,12 +12,6 @@ const NavSearch = () => {
     searchParams.get("search")?.toString() || ""
   );
 
-  // useEffect(() => {
-  //   if (!searchParams.get("search")) {
-  //     setSearch("");
-  //   }
-  // }, [searchParams.get("search"), searchParams]);
-
   useEffect(() => {
     const currentSearch = searchParams.get("search") || "";
     setSearch(currentSearch);
